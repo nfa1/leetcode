@@ -4,13 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        seenElements = set()
+        # initialize an empty set
+        seen_elements = set()
         
-        for i in nums:
-            if i in seenElements:
-                return True
-            seenElements.add(i)
-        
-        return False
-        
+        # iterate through the list
+        for num in nums: 
+            if num in seen_elements:
+                return True # Duplicate found
+            seen_elements.add(num) # add element to hash set
+        return False # No duplicates found
+    
         
