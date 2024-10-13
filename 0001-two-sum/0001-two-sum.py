@@ -5,14 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        n = len(nums)
-        map = {}
+    
+        num_map = {}
+    
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_map:
+                return [num_map[complement], i]
+            num_map[num] = i
         
-        for i in range (n):
-            complement = target - nums[i]
-            if complement in map:
-                return [map[complement], i]
-            else:
-                map[nums[i]] = i
+        return [] #no solution found
         
-        return []
