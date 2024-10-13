@@ -14,5 +14,5 @@ class Solution(object):
                 return [num_map[complement], i]
             num_map[num] = i
         
-        return [] #no solution found
+        return [] 
         
